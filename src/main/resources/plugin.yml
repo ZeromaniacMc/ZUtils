@@ -1,0 +1,6 @@
+name: ZUtils
+version: '${project.version}'
+authors: [Zeromaniac]
+contributors: [MidnightCore]
+main: tech.zerobit.ZUtils
+api-version: 1.19
