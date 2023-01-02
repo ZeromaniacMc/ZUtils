@@ -5,14 +5,6 @@ h
 8src/main/java/tech/zerobit/validator/ColorValidator.java,f\e\fe98725ec2aca4e7df5281a5f0dbc30319a30b28
 b
 2src/main/java/tech/zerobit/time/TimeConverter.java,4\f\4f080c8d54b6a27d16887510164ae02025e6e471
-_
-/src/main/java/tech/zerobit/log/ErrorLogger.java,2\3\2361626087dfea4d66cabe7a5a0dd0578eb75161
-^
-.src/main/java/tech/zerobit/log/WarnLogger.java,f\3\f3c195b6223909c2ce2350a1bd74e52106cebf92
-Z
-*src/main/java/tech/zerobit/log/Logger.java,1\d\1dd7a3bca64c611ca95c9121707f16c075f2f927
-^
-.src/main/java/tech/zerobit/log/InfoLogger.java,d\e\deee9c551fc7178590f617c743a8db9c5deffef9
 e
 5src/main/java/tech/zerobit/config/ConfigReloader.java,1\4\14977a1e69a16fd3559e1b87887f3f46f7c1c41f
 d
@@ -29,7 +21,3 @@ i
 9src/main/java/tech/zerobit/condition/StringCondition.java,4\7\47aa7b2c25a891e7b654e58ce7089fa703145464
 c
 3src/main/java/tech/zerobit/config/ConfigLoader.java,c\a\ca523115b3334e25a1696e644acb541d133a83b6
-h
-8src/main/java/tech/zerobit/formatter/ColorConverter.java,0\4\049a5d8ce0716bf7af24d5c4201652c7620d6356
-V
-&src/main/java/tech/zerobit/ZUtils.java,1\e\1ed5bf2b14e2b90383150bf59e38e0d57c9d6289

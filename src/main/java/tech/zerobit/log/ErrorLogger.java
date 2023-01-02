@@ -4,7 +4,7 @@ import java.util.logging.Level;
 
 public class ErrorLogger {
 
-    public static void errorLogger(String message) {
-        Logger.logger(Level.SEVERE, message);
+    public static void log(String message) {
+        Logger.log(Level.SEVERE, message);
     }
 }

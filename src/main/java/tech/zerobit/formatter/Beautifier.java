@@ -1,5 +1,6 @@
 package tech.zerobit.formatter;
 
+import org.bukkit.ChatColor;
 import tech.zerobit.validate.StringValidator;
 
 public class Beautifier {
@@ -27,5 +28,12 @@ public class Beautifier {
         return finalResult;
     }
 
+    public static String applyAndSymbolColor(String text) {
+        return ChatColor.translateAlternateColorCodes('&',text);
+    }
+
+    public static String applyBukkitSymbolColor(String text) {
+        return ChatColor.translateAlternateColorCodes('§',text);
+    }
 
 }
