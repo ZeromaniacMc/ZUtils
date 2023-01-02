@@ -7,12 +7,6 @@ b
 2src/main/java/tech/zerobit/time/TimeConverter.java,4\f\4f080c8d54b6a27d16887510164ae02025e6e471
 e
 5src/main/java/tech/zerobit/config/ConfigReloader.java,1\4\14977a1e69a16fd3559e1b87887f3f46f7c1c41f
-d
-4src/main/java/tech/zerobit/price/PriceShortener.java,a\8\a82baeb3a55872b7a4c2ccaddead710f2d80b952
-j
-:src/main/java/tech/zerobit/version/PluginVersionCheck.java,1\e\1e2d4e74338400d51a5827a4c67dc3e852f391e7
-j
-:src/main/java/tech/zerobit/version/ServerVersionCheck.java,5\9\5957e12f8cc479e958c377541becfdce07cebaf2
 j
 :src/main/java/tech/zerobit/condition/NumericCondition.java,6\b\6b80aa2f9c6cd44e5da6eadcf22a980d9db8f74d
 m

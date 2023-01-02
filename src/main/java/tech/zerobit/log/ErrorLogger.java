@@ -1,10 +1,12 @@
 package tech.zerobit.log;
 
+import tech.zerobit.formatter.Beautifier;
+
 import java.util.logging.Level;
 
-public class ErrorLogger {
-
+public class ErrorLogger extends Logger {
     public static void log(String message) {
-        Logger.log(Level.SEVERE, message);
+        log(Level.SEVERE, Beautifier.applyAndSymbolColor(errorLogPrefix), Beautifier.applyAndSymbolColor(message));
     }
+    private static String errorLogPrefix = "&7[&4ZUtils Error&7]&4 ";
 }
