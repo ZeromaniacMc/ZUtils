@@ -1,7 +1,6 @@
 package tech.zerobit;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import tech.zerobit.condition.StringCondition;
 
 public final class ZUtils extends JavaPlugin {
 
@@ -9,7 +8,6 @@ public final class ZUtils extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
 
-        new StringCondition();
 
     }
 
