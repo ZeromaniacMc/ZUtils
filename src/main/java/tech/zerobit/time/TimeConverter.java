@@ -1,10 +1,13 @@
 package tech.zerobit.time;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TimeConverter {
 
-    public static long convert(Unit inputUnit, long input) {
+    public static long convertToMS(Unit inputUnit, long input) {
         TimeUnit time = TimeUnit.MILLISECONDS;
 
         switch (inputUnit) {
@@ -28,6 +31,9 @@ public class TimeConverter {
         return input;
     }
 
+    public static String convertMSToDate(long milliseconds) {
+
+    }
 
     private static double dynamicModulus(int input, int unitMaximum) {
         return input % unitMaximum;

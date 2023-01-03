@@ -6,8 +6,7 @@ import tech.zerobit.time.Unit;
 public class TestCalls {
 
     public static void main(String[] args) {
-        System.out.println(TimeConverter.convert(Unit.DAYS, 8));
-
+        System.out.println(TimeConverter.convertToMS(Unit.DAYS, 8));
     }
 
 }

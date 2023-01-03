@@ -1,7 +1,7 @@
 package tech.zerobit;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import tech.zerobit.log.InfoLogger;
+import tech.zerobit.log.Logger;
 
 public final class ZUtils extends JavaPlugin {
 
@@ -10,7 +10,7 @@ public final class ZUtils extends JavaPlugin {
         // Plugin startup logic
         // Colors and prefixes are set to be parsed in each logger, no need to worry about that anywhere.
         // Text colors are also set via the prefix, so only use colors in logger if you must overwrite the log-type default color.
-        InfoLogger.log("Enabling ZUtils!");
+        Logger.log("Enabling ZUtils!");
 
     }
 
