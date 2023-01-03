@@ -4,8 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeConverter {
 
-
-
     public static long convert(String inputUnit, long input) {
         inputUnit.toLowerCase();
         TimeUnit time = TimeUnit.MILLISECONDS;
@@ -22,48 +20,48 @@ public class TimeConverter {
             case "days":
                 return time.convert(input, TimeUnit.DAYS);
             case "weeks":
-                return time.convert(input, TimeUnit.DAYS) * 7 ;
+                return time.convert(input, TimeUnit.SECONDS) * 604800;
             case "months":
-                return (long) (time.convert(input, TimeUnit.DAYS) * 30.436875);
+                return time.convert(input, TimeUnit.SECONDS) * 2628000;
             case "years":
-                return (long) (time.convert(input, TimeUnit.DAYS) * 30.436875) * 12;
+                return time.convert(input, TimeUnit.SECONDS) * 31536000;
         }
         return input;
     }
 
-
     private static int yearsToMonths(int years) {
-        return years*12;
+        return years * 12;
     }
 
     private static int yearsToDays(int years) {
-        return years*365;
+        return years * 365;
     }
 
     private static int yearsToWeeks(int years) {
-        return years*52;
+        return years * 52;
     }
 
     // todo: make exact calc for this
     private static double monthsToDaysEstimate(int months) {
-        return months*30.436875;
+        return months * 30.436875;
     }
 
     private static int daysToHours(int days) {
-        return days*24;
+        return days * 24;
     }
 
     private static int hoursToMinutes(int hours) {
-        return hours*60;
+        return hours * 60;
     }
 
     private static int minutesToSeconds(int minutes) {
-        return minutes*60;
+        return minutes * 60;
     }
 
     private static double dynamicModulus(int input, int unitMaximum) {
         return input % unitMaximum;
     }
+
     private static double dynamicModulus(double input, double unitMaximum) {
         return input % unitMaximum;
     }
@@ -71,6 +69,7 @@ public class TimeConverter {
     private static double round(double input) {
         return Math.round(input);
     }
+
     private static float round(float input) {
         return Math.round(input);
     }
