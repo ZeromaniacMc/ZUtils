@@ -1,10 +1,17 @@
 package tech.zerobit.log;
 
-import org.bukkit.Bukkit;
-import java.util.logging.Level;
+public class Logger extends ALogger {
 
-public abstract class Logger {
-    static void log(Level level, String prefix, String message) {
-        Bukkit.getLogger().log(level, prefix, message);
-    }
+  public static void log(String message) {
+    InfoLogger.log(message);
+  }
+
+  public static void error(String message) {
+    ErrorLogger.log(message);
+  }
+
+  public static void warn(String message) {
+    WarnLogger.log(message);
+  }
+
 }

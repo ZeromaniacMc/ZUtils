@@ -1,6 +1,0 @@
-name: ZUtils
-version: '1.0-SNAPSHOT'
-authors: [Zeromaniac]
-contributors: [MidnightCore]
-main: tech.zerobit.ZUtils
-api-version: 1.19

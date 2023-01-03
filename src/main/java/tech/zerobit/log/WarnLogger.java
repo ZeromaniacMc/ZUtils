@@ -4,7 +4,7 @@ import tech.zerobit.formatter.Beautifier;
 
 import java.util.logging.Level;
 
-public class WarnLogger extends Logger {
+public class WarnLogger extends ALogger {
 
     public static void log(String message) {
         log(Level.WARNING, Beautifier.applyAndSymbolColor(warnLogPrefix), Beautifier.applyAndSymbolColor(message));
