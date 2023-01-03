@@ -4,3 +4,13 @@ authors: [Zeromaniac]
 contributors: [MidnightCore]
 main: tech.zerobit.ZUtils
 api-version: 1.19
+
+commands:
+  mdh:
+    description: Main command
+    usage: /zutils
+
+permissions:
+  zutils.reload:
+    description: Permission to reload the plugin
+    default: op

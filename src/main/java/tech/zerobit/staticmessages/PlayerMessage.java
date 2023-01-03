@@ -23,4 +23,5 @@ public class PlayerMessage {
         player.sendMessage(Beautifier.applyAndSymbolColor(pluginErrorPrefix + message));
         return message;
     }
+
 }

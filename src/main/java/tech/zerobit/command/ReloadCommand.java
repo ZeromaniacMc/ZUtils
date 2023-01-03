@@ -7,6 +7,10 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tech.zerobit.ZUtils;
+import tech.zerobit.log.Logger;
+import tech.zerobit.staticmessages.CommonMessages;
+import tech.zerobit.staticmessages.PlayerMessage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,35 +25,23 @@ public class ReloadCommand implements CommandHandler {
     @Nullable
     @Override
     public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        return Arrays.stream(new String[]{"reload", "info"}).toList();
+        return Arrays.stream(new String[]{"reload"}).toList();
     }
 
     @Override
     public boolean executeCommandAsPlayer(Player sender, Command command, String label, String[] args) {
         Player player = sender;
         if (args.length == 0) {
-            //PlayerHelper.playerMessage(player, PlayerHelper.INVALID_COMMAND_PLAYER);
+            PlayerMessage.sendErrorMessageToPlayer(player, CommonMessages.INVALID_COMMAND);
         }
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("reload")) {
-                if (player.hasPermission("morediscordsrvhooks.reload") || player.isOp()) {
+                if (player.hasPermission("zutils.reload")) {
                     //ConfigHandler.reloadAllConfigs();
                     //PlayerHelper.playerMessage(player, PlayerHelper.CONFIGS_RELOADED);
                 } else {
-                    //PlayerHelper.playerMessage(player, PlayerHelper.NO_PERMISSION);
+                    PlayerMessage.sendErrorMessageToPlayer(player, CommonMessages.NO_PERMISSION);
                 }
-            }
-            if(args[0].equalsIgnoreCase("info")){
-                if (player.hasPermission("morediscordsrvhooks.info") || player.isOp()) {
-                    //PlayerHelper.playerMessageShort(player, "&bPlugin:&r " + PlayerHelper.MY_PLUGIN_NAME);
-                    //PlayerHelper.playerMessageShort(player, "&bVersion:&r " +PlayerHelper.MY_PLUGIN_VERSION);
-                    //PlayerHelper.playerMessageShort(player, "&bAuthors:&r " + PlayerHelper.MY_PLUGIN_AUTHORS);
-                    //PlayerHelper.playerMessageShort(player, "&bDependencies:&r " + PlayerHelper.MY_PLUGIN_DEPENDENCIES);
-                    //PlayerHelper.playerMessageShort(player, "&bAvailable Hooks:&r " + PlayerHelper.MY_PLUGIN_SOFTDEPENDS);
-                } else {
-                    //PlayerHelper.playerMessage(player, PlayerHelper.NO_PERMISSION);
-                }
-
             }
         }
         return true;
@@ -58,12 +50,10 @@ public class ReloadCommand implements CommandHandler {
     @Override
     public boolean executeCommandAsConsole(ConsoleCommandSender sender, Command command, String label, String[] args) {
         if (args.length != 1) {
-            //SystemHelper.consoleMessage(SystemHelper.INVALID_COMMAND_CONSOLE);
+            Logger.log(CommonMessages.INVALID_COMMAND);
         } else if (args[0].equalsIgnoreCase("reload")) {
             //ConfigHandler.reloadAllConfigs();
-            //SystemHelper.consoleMessage(SystemHelper.CONFIGS_RELOADED);
-        } else if(args[0].equalsIgnoreCase("info")){
-            //SystemHelper.infoCommandOutputConsole();
+            Logger.log(CommonMessages.CONFIGS_RELOADED);
         }
         return true;
     }
