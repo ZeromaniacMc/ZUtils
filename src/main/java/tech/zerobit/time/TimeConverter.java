@@ -4,59 +4,30 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeConverter {
 
-    public static long convert(String inputUnit, long input) {
-        inputUnit.toLowerCase();
+    public static long convert(Unit inputUnit, long input) {
         TimeUnit time = TimeUnit.MILLISECONDS;
 
         switch (inputUnit) {
-            case "milliseconds":
+            case MILLISECONDS:
                 return time.convert(input, TimeUnit.MILLISECONDS);
-            case "seconds":
+            case SECONDS:
                 return time.convert(input, TimeUnit.SECONDS);
-            case "minutes":
+            case MINUTES:
                 return time.convert(input, TimeUnit.MINUTES);
-            case "hours":
+            case HOURS:
                 return time.convert(input, TimeUnit.HOURS);
-            case "days":
+            case DAYS:
                 return time.convert(input, TimeUnit.DAYS);
-            case "weeks":
+            case WEEKS:
                 return time.convert(input, TimeUnit.SECONDS) * 604800;
-            case "months":
+            case MONTHS:
                 return time.convert(input, TimeUnit.SECONDS) * 2628000;
-            case "years":
+            case YEARS:
                 return time.convert(input, TimeUnit.SECONDS) * 31536000;
         }
         return input;
     }
 
-    private static int yearsToMonths(int years) {
-        return years * 12;
-    }
-
-    private static int yearsToDays(int years) {
-        return years * 365;
-    }
-
-    private static int yearsToWeeks(int years) {
-        return years * 52;
-    }
-
-    // todo: make exact calc for this
-    private static double monthsToDaysEstimate(int months) {
-        return months * 30.436875;
-    }
-
-    private static int daysToHours(int days) {
-        return days * 24;
-    }
-
-    private static int hoursToMinutes(int hours) {
-        return hours * 60;
-    }
-
-    private static int minutesToSeconds(int minutes) {
-        return minutes * 60;
-    }
 
     private static double dynamicModulus(int input, int unitMaximum) {
         return input % unitMaximum;
