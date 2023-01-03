@@ -1,0 +1,34 @@
+############################################################
+#                                                          #
+#                          ZUtils                          #
+#              By Zeromaniac & MidnightCore                #
+#                                                          #
+#                    ☆ Translations ☆                     #
+#                                                          #
+############################################################
+
+TimeUnit:
+  Millisecond:
+    Singular: "millisecond"
+    Plural: "milliseconds"
+  Second:
+    Singular: "second"
+    Plural: "seconds"
+  Minute:
+    Singular: "minute"
+    Plural: "minutes"
+  Hour:
+    Singular: "hour"
+    Plural: "hours"
+  Day:
+    Singular: "day"
+    Plural: "days"
+  Week:
+    Singular: "week"
+    Plural: "weeks"
+  Month:
+    Singular: "month"
+    Plural: "months"
+  Year:
+    Singular: "year"
+    Plural: "years"
