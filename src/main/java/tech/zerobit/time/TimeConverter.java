@@ -4,26 +4,11 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeConverter {
 
-    public static int convertSingleUnitByName(int inputGiven, String unitGiven, String unitExpected) {
-        if (unitGiven.equalsIgnoreCase("years")) {
-            if (unitExpected.equalsIgnoreCase("months")) {
-                return yearsToMonths(inputGiven);
-            }
-            if (unitExpected.equalsIgnoreCase("weeks")) {
-                return yearsToMonths(inputGiven);
-            }
-            if (unitExpected.equalsIgnoreCase("days")) {
-                return yearsToDays(inputGiven);
-            }
 
-        }
-        return inputGiven;
-    }
-
-    static TimeUnit time = TimeUnit.MILLISECONDS;
 
     public static long convert(String inputUnit, long input) {
         inputUnit.toLowerCase();
+        TimeUnit time = TimeUnit.MILLISECONDS;
 
         switch (inputUnit) {
             case "milliseconds":
@@ -37,11 +22,11 @@ public class TimeConverter {
             case "days":
                 return time.convert(input, TimeUnit.DAYS);
             case "weeks":
-                return time.convert(input, TimeUnit.DAYS) / 7;
+                return time.convert(input, TimeUnit.DAYS) * 7 ;
             case "months":
-                return (long) (time.convert(input, TimeUnit.DAYS) / 30.436875);
+                return (long) (time.convert(input, TimeUnit.DAYS) * 30.436875);
             case "years":
-                return (long) (time.convert(input, TimeUnit.DAYS) / 30.436875) / 12;
+                return (long) (time.convert(input, TimeUnit.DAYS) * 30.436875) * 12;
         }
         return input;
     }

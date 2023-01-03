@@ -1,6 +1,6 @@
 package tech.zerobit.log;
 
-public class Logger extends ALogger {
+public class Logger {
 
   public static void log(String message) {
     InfoLogger.log(message);
@@ -13,6 +13,9 @@ public class Logger extends ALogger {
   public static void warn(String message) {
     WarnLogger.log(message);
   }
+
+
+
 
   public static void log(String... message) {
     InfoLogger.log(String.join(" ", message));
